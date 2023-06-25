@@ -35,6 +35,7 @@
             label1 = new Label();
             btnCopy = new Button();
             btnClose = new Button();
+            yesNoAnimationCtrl = new YesNoAnimationCtrl();
             ((System.ComponentModel.ISupportInitialize)dgvMachineInfo).BeginInit();
             SuspendLayout();
             // 
@@ -94,11 +95,20 @@
             btnClose.Text = "关闭";
             btnClose.UseVisualStyleBackColor = true;
             // 
+            // yesNoAnimationCtrl
+            // 
+            yesNoAnimationCtrl.Location = new Point(412, 493);
+            yesNoAnimationCtrl.Name = "yesNoAnimationCtrl";
+            yesNoAnimationCtrl.Size = new Size(58, 58);
+            yesNoAnimationCtrl.TabIndex = 19;
+            yesNoAnimationCtrl.Text = "yesNoAnimationCtrl";
+            // 
             // SiteCodeForm
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(482, 553);
+            Controls.Add(yesNoAnimationCtrl);
             Controls.Add(btnClose);
             Controls.Add(btnCopy);
             Controls.Add(dgvMachineInfo);
@@ -119,11 +129,11 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dgvMachineInfo;
-        //private YesNoAnimationCtrl yesNoAnimationCtrl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCopy;
         private System.Windows.Forms.Button btnClose;
         private DataGridViewTextBoxColumn Project;
         private DataGridViewTextBoxColumn Value;
+        private YesNoAnimationCtrl yesNoAnimationCtrl;
     }
 }

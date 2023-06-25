@@ -34,10 +34,10 @@ namespace HardwareProvider
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //if (this.yesNoAnimationCtrl.Visible)
-            //{
-            //    e.Cancel = true;
-            //}
+            if (this.yesNoAnimationCtrl.Visible)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -47,8 +47,8 @@ namespace HardwareProvider
             this.dgvMachineInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvMachineInfo.RowTemplate.Height = 30;
 
-            //this.yesNoAnimationCtrl.Visible = true;
-            //this.yesNoAnimationCtrl.Start();
+            this.yesNoAnimationCtrl.Visible = true;
+            this.yesNoAnimationCtrl.Start();
 
             Task<MachineInfo> task = new Task<MachineInfo>(new Func<MachineInfo>(
                 () =>
@@ -60,7 +60,6 @@ namespace HardwareProvider
                     }
                     catch (Exception exp)
                     {
-                        //s_log.Error(exp);
                     }
 
                     return mi;
@@ -108,8 +107,8 @@ namespace HardwareProvider
                                 this.btnCopy.Enabled = this.btnClose.Enabled = true;
                                 this.btnCopy.Focus();
 
-                                //this.yesNoAnimationCtrl.Visible = false;
-                                //this.yesNoAnimationCtrl.Stop(YesNoWarn.Unknown);
+                                this.yesNoAnimationCtrl.Visible = false;
+                                this.yesNoAnimationCtrl.Stop(YesNoWarn.Unknown);
                             }
                             catch (Exception exp)
                             {
