@@ -43,9 +43,6 @@ namespace HardwareProvider
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.btnCopy.Enabled = this.btnClose.Enabled = false;
-
-            this.dgvMachineInfo.Columns.Add("Project", "ÏîÄ¿");
-            this.dgvMachineInfo.Columns.Add("Value", "Öµ");
             this.dgvMachineInfo.AllowUserToAddRows = false;
             this.dgvMachineInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvMachineInfo.RowTemplate.Height = 30;
@@ -95,34 +92,6 @@ namespace HardwareProvider
                                     }
                                 }
                                 this.dgvMachineInfo.Rows[0].Selected = false;
-
-                                //using (MemoryStream ms = new MemoryStream())
-                                //{
-                                //    XmlWriterSettings settings = new XmlWriterSettings();
-                                //    settings.Indent = true;
-                                //    settings.IndentChars = "\t";
-                                //    settings.Encoding = new UTF8Encoding(false);
-                                //    settings.ConformanceLevel = ConformanceLevel.Auto;
-                                //    using (XmlWriter writer = XmlWriter.Create(ms, settings))
-                                //    {
-                                //        writer.WriteStartDocument();
-                                //        writer.WriteStartElement(this.m_machineInfo.GetType().Name);
-                                //        writer.WriteAttributeString("SiteCode", this.m_machineInfo.GetSiteCode());
-                                //        foreach (DataGridViewRow dgvRow in dgvMachineInfo.Rows)
-                                //        {
-                                //            string project = dgvRow.Cells["Project"].Value.ToString().Replace(" ", "");
-                                //            string value = dgvRow.Cells["Value"].Value.ToString();
-                                //            writer.WriteElementString(project, value);
-                                //        }
-                                //        writer.WriteEndElement();
-                                //        writer.WriteEndDocument();
-                                //    }
-                                //    ms.Position = 0;
-                                //    byte[] buffer = new byte[ms.Length];
-                                //    ms.Read(buffer, 0, buffer.Length);
-                                //    this.m_clipboradInfo = new UTF8Encoding(false).GetString(buffer);
-                                //}
-
                                 StringBuilder builder = new StringBuilder();
                                 using (StringWriter sw = new StringWriter(builder))
                                 {
@@ -161,7 +130,5 @@ namespace HardwareProvider
         {
             this.Close();
         }
-
-
     }
 }

@@ -28,90 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SiteCodeForm));
-            this.dgvMachineInfo = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            //this.yesNoAnimationCtrl = new LicenseRequestTools.YesNoAnimationCtrl();
-            this.btnCopy = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMachineInfo)).BeginInit();
-            this.SuspendLayout();
+            dgvMachineInfo = new DataGridView();
+            label1 = new Label();
+            btnCopy = new Button();
+            btnClose = new Button();
+            Project = new DataGridViewTextBoxColumn();
+            Value = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvMachineInfo).BeginInit();
+            SuspendLayout();
             // 
             // dgvMachineInfo
             // 
-            this.dgvMachineInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMachineInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMachineInfo.Location = new System.Drawing.Point(16, 37);
-            this.dgvMachineInfo.Name = "dgvMachineInfo";
-            this.dgvMachineInfo.ReadOnly = true;
-            this.dgvMachineInfo.RowTemplate.Height = 23;
-            this.dgvMachineInfo.Size = new System.Drawing.Size(454, 450);
-            this.dgvMachineInfo.TabIndex = 4;
+            dgvMachineInfo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvMachineInfo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMachineInfo.Columns.AddRange(new DataGridViewColumn[] { Project, Value });
+            dgvMachineInfo.Location = new Point(16, 37);
+            dgvMachineInfo.Name = "dgvMachineInfo";
+            dgvMachineInfo.ReadOnly = true;
+            dgvMachineInfo.RowTemplate.Height = 23;
+            dgvMachineInfo.Size = new Size(454, 450);
+            dgvMachineInfo.TabIndex = 4;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 41);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "硬件信息列表";
-            // 
-            // yesNoAnimationCtrl
-            // 
-            //this.yesNoAnimationCtrl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            //this.yesNoAnimationCtrl.Location = new System.Drawing.Point(422, 493);
-            //this.yesNoAnimationCtrl.Name = "yesNoAnimationCtrl";
-            //this.yesNoAnimationCtrl.Size = new System.Drawing.Size(48, 48);
-            //this.yesNoAnimationCtrl.TabIndex = 16;
-            //this.yesNoAnimationCtrl.Text = "yesNoAnimationCtrl1";
+            label1.AutoSize = true;
+            label1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(12, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(106, 21);
+            label1.TabIndex = 1;
+            label1.Text = "硬件信息列表";
             // 
             // btnCopy
             // 
-            this.btnCopy.Location = new System.Drawing.Point(150, 511);
-            this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(88, 30);
-            this.btnCopy.TabIndex = 17;
-            this.btnCopy.Text = "复制";
-            this.btnCopy.UseVisualStyleBackColor = true;
-            //this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
+            btnCopy.Location = new Point(150, 511);
+            btnCopy.Name = "btnCopy";
+            btnCopy.Size = new Size(88, 30);
+            btnCopy.TabIndex = 17;
+            btnCopy.Text = "复制";
+            btnCopy.UseVisualStyleBackColor = true;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(244, 511);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(88, 30);
-            this.btnClose.TabIndex = 18;
-            this.btnClose.Text = "关闭";
-            this.btnClose.UseVisualStyleBackColor = true;
-            //this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            btnClose.Location = new Point(244, 511);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(88, 30);
+            btnClose.TabIndex = 18;
+            btnClose.Text = "关闭";
+            btnClose.UseVisualStyleBackColor = true;
+            // 
+            // Project
+            // 
+            Project.FillWeight = 140F;
+            Project.HeaderText = "Project";
+            Project.Name = "Project";
+            Project.ReadOnly = true;
+            Project.Width = 140;
+            // 
+            // Value
+            // 
+            Value.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Value.FillWeight = 300F;
+            Value.HeaderText = "Value";
+            Value.Name = "Value";
+            Value.ReadOnly = true;
             // 
             // SiteCodeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 41F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 553);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnCopy);
-            //this.Controls.Add(this.yesNoAnimationCtrl);
-            this.Controls.Add(this.dgvMachineInfo);
-            this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "SiteCodeForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "计算机硬件信息收集工具";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMachineInfo)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(482, 553);
+            Controls.Add(btnClose);
+            Controls.Add(btnCopy);
+            Controls.Add(dgvMachineInfo);
+            Controls.Add(label1);
+            Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(5);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "SiteCodeForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "计算机硬件信息收集工具";
+            ((System.ComponentModel.ISupportInitialize)dgvMachineInfo).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -120,5 +121,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCopy;
         private System.Windows.Forms.Button btnClose;
+        private DataGridViewTextBoxColumn Project;
+        private DataGridViewTextBoxColumn Value;
     }
 }
