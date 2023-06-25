@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardwareProvider", "Hardwar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityServiceProvider", "..\SecurityServiceProvider\SecurityServiceProvider.csproj", "{A824DB9B-F27D-4648-B50F-79335469797F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animation", "..\Animation\Animation.csproj", "{2B170AE4-E4B5-4693-BE9C-7E9D1DF7ADF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A824DB9B-F27D-4648-B50F-79335469797F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A824DB9B-F27D-4648-B50F-79335469797F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A824DB9B-F27D-4648-B50F-79335469797F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B170AE4-E4B5-4693-BE9C-7E9D1DF7ADF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B170AE4-E4B5-4693-BE9C-7E9D1DF7ADF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B170AE4-E4B5-4693-BE9C-7E9D1DF7ADF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B170AE4-E4B5-4693-BE9C-7E9D1DF7ADF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
