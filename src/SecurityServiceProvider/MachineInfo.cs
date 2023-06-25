@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Xml.Serialization;
 using System.Xml;
+using System.Management;
 
 namespace SecurityServiceProvider
 {

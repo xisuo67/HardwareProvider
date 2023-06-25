@@ -1,3 +1,4 @@
+using SecurityServiceProvider;
 using System.Reflection;
 using System.Text;
 
@@ -5,15 +6,15 @@ namespace HardwareProvider
 {
     public partial class SiteCodeForm : Form
     {
-        private static readonly ISecurityServiceLog s_log;
+        //private static readonly ISecurityServiceLog s_log;
 
         private MachineInfo m_machineInfo;
         private string m_clipboradInfo;
 
         static SiteCodeForm()
         {
-            ISecurityServiceLogFactory logFactor = new SecurityServiceLogFactory();
-            s_log = logFactor.GetCurrentThreadLog();
+            //ISecurityServiceLogFactory logFactor = new SecurityServiceLogFactory();
+            //s_log = logFactor.GetCurrentThreadLog();
         }
 
         public SiteCodeForm()
@@ -33,10 +34,10 @@ namespace HardwareProvider
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (this.yesNoAnimationCtrl.Visible)
-            {
-                e.Cancel = true;
-            }
+            //if (this.yesNoAnimationCtrl.Visible)
+            //{
+            //    e.Cancel = true;
+            //}
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -62,7 +63,7 @@ namespace HardwareProvider
                     }
                     catch (Exception exp)
                     {
-                        s_log.Error(exp);
+                        //s_log.Error(exp);
                     }
 
                     return mi;
@@ -143,7 +144,7 @@ namespace HardwareProvider
                             }
                             catch (Exception exp)
                             {
-                                s_log.Error(exp);
+                                //s_log.Error(exp);
                             }
                         }));
                 }));
