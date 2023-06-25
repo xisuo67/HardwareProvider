@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SiteCodeForm));
             dgvMachineInfo = new DataGridView();
+            Project = new DataGridViewTextBoxColumn();
+            Value = new DataGridViewTextBoxColumn();
             label1 = new Label();
             btnCopy = new Button();
             btnClose = new Button();
-            Project = new DataGridViewTextBoxColumn();
-            Value = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvMachineInfo).BeginInit();
             SuspendLayout();
             // 
@@ -48,6 +49,22 @@
             dgvMachineInfo.RowTemplate.Height = 23;
             dgvMachineInfo.Size = new Size(454, 450);
             dgvMachineInfo.TabIndex = 4;
+            // 
+            // Project
+            // 
+            Project.FillWeight = 140F;
+            Project.HeaderText = "Project";
+            Project.Name = "Project";
+            Project.ReadOnly = true;
+            Project.Width = 140;
+            // 
+            // Value
+            // 
+            Value.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Value.FillWeight = 300F;
+            Value.HeaderText = "Value";
+            Value.Name = "Value";
+            Value.ReadOnly = true;
             // 
             // label1
             // 
@@ -77,22 +94,6 @@
             btnClose.Text = "关闭";
             btnClose.UseVisualStyleBackColor = true;
             // 
-            // Project
-            // 
-            Project.FillWeight = 140F;
-            Project.HeaderText = "Project";
-            Project.Name = "Project";
-            Project.ReadOnly = true;
-            Project.Width = 140;
-            // 
-            // Value
-            // 
-            Value.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Value.FillWeight = 300F;
-            Value.HeaderText = "Value";
-            Value.Name = "Value";
-            Value.ReadOnly = true;
-            // 
             // SiteCodeForm
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
@@ -104,6 +105,7 @@
             Controls.Add(label1);
             Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5);
             MaximizeBox = false;
             MinimizeBox = false;
