@@ -41,14 +41,15 @@
             // 
             // dgvMachineInfo
             // 
-            dgvMachineInfo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvMachineInfo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvMachineInfo.BackgroundColor = SystemColors.Control;
             dgvMachineInfo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvMachineInfo.Columns.AddRange(new DataGridViewColumn[] { Project, Value });
             dgvMachineInfo.Location = new Point(16, 37);
             dgvMachineInfo.Name = "dgvMachineInfo";
             dgvMachineInfo.ReadOnly = true;
             dgvMachineInfo.RowTemplate.Height = 23;
-            dgvMachineInfo.Size = new Size(454, 450);
+            dgvMachineInfo.Size = new Size(454, 197);
             dgvMachineInfo.TabIndex = 4;
             // 
             // Project
@@ -57,7 +58,7 @@
             Project.HeaderText = "Project";
             Project.Name = "Project";
             Project.ReadOnly = true;
-            Project.Width = 140;
+            Project.Width = 88;
             // 
             // Value
             // 
@@ -79,7 +80,7 @@
             // 
             // btnCopy
             // 
-            btnCopy.Location = new Point(150, 511);
+            btnCopy.Location = new Point(150, 263);
             btnCopy.Name = "btnCopy";
             btnCopy.Size = new Size(88, 30);
             btnCopy.TabIndex = 17;
@@ -88,7 +89,7 @@
             // 
             // btnClose
             // 
-            btnClose.Location = new Point(244, 511);
+            btnClose.Location = new Point(244, 263);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(88, 30);
             btnClose.TabIndex = 18;
@@ -97,7 +98,7 @@
             // 
             // yesNoAnimationCtrl
             // 
-            yesNoAnimationCtrl.Location = new Point(412, 493);
+            yesNoAnimationCtrl.Location = new Point(412, 245);
             yesNoAnimationCtrl.Name = "yesNoAnimationCtrl";
             yesNoAnimationCtrl.Size = new Size(58, 58);
             yesNoAnimationCtrl.TabIndex = 19;
@@ -107,7 +108,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(482, 553);
+            ClientSize = new Size(482, 309);
             Controls.Add(yesNoAnimationCtrl);
             Controls.Add(btnClose);
             Controls.Add(btnCopy);
