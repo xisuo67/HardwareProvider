@@ -86,6 +86,7 @@
             btnCopy.TabIndex = 17;
             btnCopy.Text = "复制";
             btnCopy.UseVisualStyleBackColor = true;
+            btnCopy.Click += btnCopy_Click;
             // 
             // btnClose
             // 
