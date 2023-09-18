@@ -6,11 +6,24 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PackageIcon>license.ico</PackageIcon>
+    <ApplicationIcon>license.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="license.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Animation\Animation.csproj" />
     <ProjectReference Include="..\SecurityServiceProvider\SecurityServiceProvider.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="license.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
