@@ -1,3 +1,4 @@
+using HardwareProvider.LogService;
 using SecurityServiceProvider;
 using System.Reflection;
 using System.Text;
@@ -6,15 +7,13 @@ namespace HardwareProvider
 {
     public partial class SiteCodeForm : Form
     {
-        //private static readonly ISecurityServiceLog s_log;
-
+        private static readonly ILogger Logger = LoggerService.Get(typeof(SiteCodeForm));
         private MachineInfo m_machineInfo;
         private string m_clipboradInfo;
 
         static SiteCodeForm()
         {
-            //ISecurityServiceLogFactory logFactor = new SecurityServiceLogFactory();
-            //s_log = logFactor.GetCurrentThreadLog();
+
         }
 
         public SiteCodeForm()
@@ -60,6 +59,8 @@ namespace HardwareProvider
                     }
                     catch (Exception exp)
                     {
+                        Logger.Error("硬件信息读取失败",exp);
+                        Logger.Info($"硬件信息读取失败:{exp.ToString()}");
                     }
 
                     return mi;
